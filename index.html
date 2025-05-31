@@ -1,0 +1,63 @@
+index.html	html<br>(code block below)<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Third Space</title>
+
+<!-- Social preview -->
+<meta property="og:title" content="Your Third Space – a calm digital room built for men">
+<meta property="og:description" content="Stop. Breathe. Feel. Just be.">
+<meta property="og:image" content="https://yourthirdspace.net/assets/hero.png">
+<meta property="og:url" content="https://yourthirdspace.net/">
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- iOS tweaks -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="style.css">
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => navigator.serviceWorker.register('/sw.js'));
+}
+</script>
+</head>
+<body>
+<main>
+  <section id="hero">
+    <img src="assets/hero.png" class="hero-img" alt="">
+    <div class="hero-text">
+      <h1>Welcome to your Third Space</h1>
+      <p>A sanctuary built for men. It’s not a place to fix yourself or figure it all out.<br>
+         It’s a place to stop. To breathe. To feel. To just be.</p>
+
+      <div class="cta-group">
+        <button id="enter-btn" class="btn-filled">Enter Your Space</button>
+        <a href="/journal.html" class="btn-outline">Journal Your Space</a>
+        <button id="share-btn" class="btn-filled">Share The Space</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="chat-section" class="hidden">
+    <div class="chat-wrapper">
+      <header class="chat-header">
+        <span>Your Third Space</span>
+        <button id="exit-btn" class="exit-btn">Exit Your Space</button>
+      </header>
+      <div id="customgpt_chat" class="chat-body"></div>
+    </div>
+  </section>
+</main>
+
+<script src="https://cdn.customgpt.ai/js/embed.js" defer
+        div_id="customgpt_chat"
+        p_id="60662"
+        p_key="0aa498c24f97ce5ea1e267f0df862f8b"></script>
+<script src="install.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
