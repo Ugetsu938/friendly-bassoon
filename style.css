@@ -1,0 +1,42 @@
+style.css	css<br>(code block below):root{--dark:#2e3e4f;--light:#e6e7e9;}
+*{box-sizing:border-box;}
+html,body{margin:0;padding:0;height:100%;background:var(--dark);color:var(--light);font-family:system-ui,Arial,sans-serif;}
+main{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;}
+#hero{text-align:center;display:flex;flex-direction:column;align-items:center;gap:1.5rem;padding:1rem;}
+.hero-img{max-width:320px;width:80%;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,.3);}
+
+/* --- uniform CTA blocks --- */
+.cta-group a,
+.cta-group button{
+  display:block;
+  width:220px;
+  margin:0.25rem auto;
+  text-align:center;
+  font-weight:bold;
+  padding:0.75rem 1rem;
+  border-radius:8px;
+}
+
+/* filled buttons (Enter + Share) */
+.btn-filled{
+  background:var(--light);
+  color:var(--dark);
+  border:none;
+  transition:transform .15s;
+}
+.btn-filled:hover{transform:scale(1.05);}
+
+/* outlined button (Journal) */
+.btn-outline{
+  background:transparent;
+  color:var(--light);
+  border:2px solid var(--light);
+  transition:background .15s;
+}
+.btn-outline:hover{background:rgba(255,255,255,.1);}
+
+.hidden{display:none;}
+.chat-wrapper{background:var(--light);color:var(--dark);border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,.3);width:90vw;max-width:720px;height:80vh;display:flex;flex-direction:column;}
+.chat-header{display:flex;justify-content:space-between;align-items:center;padding:.5rem 1rem;border-bottom:1px solid rgba(0,0,0,.1);font-weight:bold;}
+.exit-btn{background:transparent;border:none;color:var(--dark);font-weight:bold;cursor:pointer;}
+.chat-body{flex:1;overflow:hidden;}
