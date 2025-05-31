@@ -1,0 +1,15 @@
+journal.html	html<br>(code block below)<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Your Journal • Your Third Space</title>
+<link rel="stylesheet" href="journal.css">
+<link rel="manifest" href="manifest.json">
+<script>if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('/sw.js'));}</script>
+</head><body>
+<header class="bar"><a href="/index.html" class="back">&larr;</a><span class="title">Your Journal</span><span id="streak" class="streak"></span></header>
+<main>
+  <input type="date" id="datePick">
+  <textarea id="entryBox" placeholder="Your words stay here…"></textarea>
+  <footer id="status">Autosaved</footer>
+</main>
+<script src="journal.js"></script>
+</body></html>
